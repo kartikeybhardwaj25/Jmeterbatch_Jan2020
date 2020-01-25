@@ -1,0 +1,33 @@
+name: rmi
+password: changeit
+
+
+Step 1: setup master
+	added remote system's ip in jmeter.properties
+
+Step 2: create keystone file
+	run create-rmi-keystore.bat/ create-rmi-keystore.sh
+	name: rmi
+	password: changeit
+
+Step 3: run jmeter-server file on slave (remote) system
+Step 4: run and validate GUI commandline
+
+
+
+
+Prerequisites:
+
+- all systems (master and slaves) have same version of jmeter
+- all systems have java (same version)
+- all systems should be able to connect and are in same subnet
+- no need to copy jmeter scripts (jmx) to slave systems
+- if you want 100 users and using 2 slaves. Give no as 50
+
+
+
+jmeter -n -t "location of .jmx file" -l "/result.csv" -R 192.168.1.1
+
+
+
+
